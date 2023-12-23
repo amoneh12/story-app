@@ -11,7 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+      Schema::create('products-color', function (Blueprint $table) {
+        $table->id();
+        $table->string('color');
+        $table->integer('products_id')->unsigned();
+        $table->foreign('products-id')->references('id')->on('products'); 
+        $table->timestamps();
+    });
     }
 
     /**
@@ -19,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+      Schema::dropIfExists('products_color');
     }
 };
