@@ -12,12 +12,12 @@ return new class extends Migration
     public function up(): void
     {
       Schema::create('categorie', function (Blueprint $table) {
-        $table->id();
+        $table->increments('id');
         $table->string('name');
         $table->string('image');
-        $table->integer('parent-id')->nullable();
+        $table->integer('parent id')->nullable();
         $table->timestamps();
-        $table->$table->softDeletes();
+        $table->softDeletes();// Adds the 'deleted_at' column for soft deletes
     });
     }
 
