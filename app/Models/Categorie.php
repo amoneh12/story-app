@@ -13,10 +13,10 @@ class Categorie extends Model
 
     
     public function child(){
-      return $this->hasMany(Category::class, 'parent_id');
+      return $this->hasMany(Categorie::class, 'parent_id');
   }
 
   public function product(){
-      return $this->hasMany(Product::class, 'category_id');
+      return $this->hasMany(Products::class, 'category_id');
   }
   }

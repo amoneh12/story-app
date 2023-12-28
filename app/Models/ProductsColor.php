@@ -11,13 +11,13 @@ class ProductsColor extends Model
     protected $fillable=['id', 'product_id', 'color']; 
     protected $table = 'products_color';
 
-    public function product()
+    public function products()
     {
-        return $this->belongsTo(Product::class);
+        return $this->belongsTo(Products::class);
     }
 
-    public function productColorSize()
+    public function productsColorSize()
     {
-        return $this->hasMany(ProductColorSize::class);
+        return $this->hasMany(ProductsColorSize::class);
     }
 }

@@ -17,7 +17,7 @@ class OrderDetails extends Model
         return $this->belongsTo(Order::class);
     }
 
-    public function productColorSize()
+    public function productsColorSize()
     {
         return $this->belongsTo(ProductColorSize::class);
     }
