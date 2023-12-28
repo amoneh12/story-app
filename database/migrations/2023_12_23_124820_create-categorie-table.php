@@ -15,7 +15,7 @@ return new class extends Migration
         $table->increments('id');
         $table->string('name');
         $table->string('image');
-        $table->integer('parent id')->nullable();
+        $table->integer('parent_id')->nullable();
         $table->timestamps();
         $table->softDeletes();// Adds the 'deleted_at' column for soft deletes
     });

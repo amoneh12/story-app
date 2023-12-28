@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class ProductsSize extends Model
 {
     use HasFactory;
+    protected $fillable=['id', 'product_id', 'size']; 
+    protected $table = 'product_sizes';
 }
