@@ -12,4 +12,13 @@ class OrderDetails extends Model
      'quantity', 'price', 'discount'];
      protected $table = 'order_details';
 
+     public function order()
+    {
+        return $this->belongsTo(Order::class);
+    }
+
+    public function productColorSize()
+    {
+        return $this->belongsTo(ProductColorSize::class);
+    }
 }

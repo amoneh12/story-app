@@ -13,4 +13,8 @@ class Order extends Model
      , 'created_at', 'updated_at'];
     protected $table = 'order';
 
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
   }

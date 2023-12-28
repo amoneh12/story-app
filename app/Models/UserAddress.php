@@ -11,4 +11,9 @@ class UserAddress extends Model
     protected $fillable=['id', 'user_id', 'address', 'city', 'state', 'country', 'postal_code',
      'phone', 'email', 'name', 'surname']; 
     protected $table = 'product_images';
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
